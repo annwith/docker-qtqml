@@ -1,6 +1,16 @@
 # qtqml-docker
 Docker capaz de rodar aplicações Qt/QML com interface para o usuário.
 
+## Como utilizar o Docker com a interface
+* To run the Container: 
+docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY image
+
+* To open the container terminal:
+docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -a stdin -a stdout -i -t jumidlej/qtqml /bin/bash
+
+* To fix Error: No protocol specified QXcbConnection: Could not connect to display
+xhost +local:docker
+
 ## Instalação do Qt/QML no Raspberry
 * Pacotes necessários
 
