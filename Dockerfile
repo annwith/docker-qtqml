@@ -16,16 +16,11 @@ RUN apt-get install -y \
     libqt4-test \
     python3-pyqt5
 
-# qmlscene
-RUN apt-get install -y \
-    qmlscene \
-    qml-module-qtquick-dialogs \
-    qml-module-qtquick-controls \
-    qml-module-qtquick-layouts \
-    qml-module-qtquick-window2
-
 RUN apt-get install -y qt5-default
-RUN apt-get install -y qtcreator
+
+# qmlscene
+RUN apt-get install -y qmlscene
+
 RUN apt-get install -y qtdeclarative5-* \
     qml-module-qtquick* \
     qtquickcontrols5-* \
