@@ -1,4 +1,4 @@
-FROM raspbian/desktop
+FROM navikey/raspbian-buster
 
 USER root
 
@@ -16,8 +16,6 @@ RUN apt-get install -y \
     libqt4-test \
     python3-pyqt5
 
-RUN apt-get install -y qt5-default
-
 # qmlscene
 RUN apt-get install -y \
     qmlscene \
@@ -26,4 +24,9 @@ RUN apt-get install -y \
     qml-module-qtquick-layouts \
     qml-module-qtquick-window2
 
-RUN apt-get install -y qtdeclarative5-* qml-module-qtquick* qtquickcontrols5-* qml-module-qtquick2
+RUN apt-get install -y qt5-default
+RUN apt-get install -y qtcreator
+RUN apt-get install -y qtdeclarative5-* \
+    qml-module-qtquick* \
+    qtquickcontrols5-* \
+    qml-module-qtquick2
